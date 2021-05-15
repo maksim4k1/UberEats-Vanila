@@ -34,6 +34,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight: 400;}
 body{background: #ffffff; color: var(--main-text-black); font-family: 'Roboto', sans-serif;}
 /* Стили контейнеров */
 .container{width: 100%; max-width: 972px; margin: 0 auto; padding: 0 8px;}
+@media screen and (max-width: 320px) {
+	.container{
+		padding: 0 4px 0 8px;
+	}
+}
 
 /* Главные цвета */
 :root{
