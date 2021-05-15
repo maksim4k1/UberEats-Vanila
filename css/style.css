@@ -103,3 +103,27 @@
         background: var(--main-green);
     }
 }
+/* Menu */
+.menu {
+    height: 80px;
+    margin: 0 0 56px 0;
+    border-bottom: 1px solid rgba(117, 117, 117, 0.2);
+}
+.menu__container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.menu__link {
+    height: 18px;
+    display: inline-block;
+    margin: 0 40.5px 0 0;
+    cursor: pointer;
+}
+.menu__link>button{
+    white-space: nowrap;
+    color: var(--main-text-grey);
+}
+.menu__link_active {
+    color: var(--main-text-green);
+}
