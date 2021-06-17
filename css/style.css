@@ -11,9 +11,8 @@
     overflow: auto;
     background: var(--main-bg-darkening);
 }
-.toggle-modal{
-    opacity: 1;
-    z-index: 100;
+.body-overflow{
+    overflow: hidden;
 }
 /* Header */
 .main-header {
@@ -78,13 +77,11 @@
     }
 }
 /* Sign In / Register modal */
-#register, #signin{
-    opacity: 0;
-    z-index: -100;
-}
 .main-header__modal {
     padding: 0 15px;
     transition: all 0.3s;
+    opacity: 0;
+    z-index: -100;
 }
 .main-header__modal-form {
     max-width: 400px;
@@ -142,6 +139,10 @@
 }
 .main-header__modal-link>button{
     color: var(--main-green);
+}
+.toggle-modal{
+    opacity: 1;
+    z-index: 100;
 }
 /* Home */
 .home {
