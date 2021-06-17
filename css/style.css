@@ -68,6 +68,10 @@
     margin: 0 2px 0 20px;
     cursor: pointer;
 }
+.main-header__modal-error{
+    color: #ff0000;
+    font-size: 14px;
+}
 .main-header__basket>svg>path{
     transition: all 0.3s;
 }
