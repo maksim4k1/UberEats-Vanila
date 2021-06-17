@@ -49,4 +49,5 @@ body{background: #ffffff; color: var(--main-text-black); font-family: 'Roboto', 
 	--main-text-black: #1D1D1D;
 	--main-text-grey: #626262;
 	--main-text-green: #327430;
+	--main-bg-darkening: rgb(0, 0, 0, 0.6);
 }
