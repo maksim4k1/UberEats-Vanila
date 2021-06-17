@@ -30,22 +30,24 @@
             </div>
         </div>
         <div class="main-header__modal darkening-background" id="signin">
-            <form class="main-header__modal-form">
+            <form action="" class="main-header__modal-form">
                 <h3 class="main-header__modal-title">Авторизация</h3>
                 <input type="text" name="login" class="main-header__modal-input" placeholder="Введите логин"/>
                 <input type="password" name="password" class="main-header__modal-input" placeholder="Введите пароль"/>
-                <button class="main-header__modal-button">Sign In</button>
+                <div class="main-header__modal-error"></div>
+                <button type="submit" class="main-header__modal-button">Sign In</button>
                 <div class="main-header__modal-link">Еще не пользовались Uber Eats? <button type="button">Создать аккаунт</button></div>
             </form>
         </div>
         <div class="main-header__modal darkening-background" id="register">
-            <form class="main-header__modal-form">
+            <form action="" class="main-header__modal-form">
                 <h3 class="main-header__modal-title">Регистрация</h3>
                 <input type="text" name="login" class="main-header__modal-input" placeholder="Введите логин"/>
                 <input type="email" name="email" class="main-header__modal-input" placeholder="Введите email"/>
-                <input type="password" name="password" class="main-header__modal-input" placeholder="Введите пароль"/>
-                <input type="password" name="check_password" class="main-header__modal-input" placeholder="Подтвердите пароль"/>
-                <button class="main-header__modal-button">Register</button>
+                <input type="password" name="password" class="main-header__modal-input" id="password" placeholder="Введите пароль"/>
+                <input type="password" name="check_password" class="main-header__modal-input" id="checkPassword" placeholder="Подтвердите пароль"/>
+                <div class="main-header__modal-error"></div>
+                <button type="submit" class="main-header__modal-button">Register</button>
             </form>
         </div>
     </header>
@@ -137,6 +139,11 @@
                             <img src="img/svg/world.svg" alt="">
                             <span>english</span>
                             <img src="img/svg/arrow.svg" alt="">
+                            <ul class="main-footer__button-list">
+                                <li class="main-footer__button-item main-footer__button-item_selected">english</li>
+                                <li class="main-footer__button-item">русский</li>
+                                <li class="main-footer__button-item">кыргызский</li>
+                            </ul>
                         </button>
                     </div>
                     <div class="main-footer__hashtag"><span>#</span>UberEats</div>
