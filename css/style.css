@@ -311,19 +311,52 @@
 .main-footer__menu:last-child{
     margin: 0 80px 0 0;
 }
+.main-footer__button{
+    overflow: hidden;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
 .main-footer__button>button {
     width: 100%;
     padding: 12px 8px 12px 16px;
     display: flex;
     align-items: center;
+    position: relative;
     background: #3B3B3B;
-    border-radius: 2px;
     color: var(--main-white);
     text-transform: uppercase;
+}
+.button-overflow{
+    overflow: visible;
+    border-radius: 0 2px 2px 0;
 }
 .main-footer__button>button>span{
     display: block;
     margin: 0 auto 0 16px;
+}
+.main-footer__button-list {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #3B3B3B;
+    border-radius: 0 0 2px 2px;
+}
+.main-footer__button-item {
+    width: 100%;
+    text-align: start;
+    padding: 8px 0 8px 48px;
+    transition: all 0.3s;
+}
+.main-footer__button-item_selected{
+    background: #4B4B4B;
+}
+@media(hover){
+    .main-footer__button-item:hover{
+        background: #4B4B4B;
+    }
 }
 .main-footer__hashtag {
     font-size: 16px;

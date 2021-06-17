@@ -1,3 +1,4 @@
+// Modal windows
 const openSignin = document.getElementById("openSignin");
 const signin = document.getElementById("signin");
 const signinForm = signin.querySelector(".main-header__modal-form");
@@ -69,3 +70,20 @@ function toggleRegister() {
     register.classList.toggle("toggle-modal");
     document.body.classList.toggle("body-overflow");
 }
+
+// Select language
+const selectButton = document.querySelector(".main-footer__button");
+selectButton.addEventListener("click", function() {
+    selectButton.classList.toggle("button-overflow");
+    let selectedLanguage = document.querySelector(".main-footer__button>button>span");
+    let selectOptions = document.querySelectorAll(".main-footer__button-item");
+    for(let i = 0; i < selectOptions.length; i++){
+        selectOptions[i].addEventListener("click", function () {
+            for(let j = 0; j < selectOptions.length; j++){
+                selectOptions[j].classList.remove("main-footer__button-item_selected");
+            }
+            selectedLanguage.innerHTML = selectOptions[i].textContent;
+            selectOptions[i].classList.add("main-footer__button-item_selected");
+        });
+    }
+});
