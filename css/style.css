@@ -119,12 +119,18 @@
     display: inline-block;
     margin: 0 40.5px 0 0;
     cursor: pointer;
+    transition: all 0.3s;
+}
+@media(hover){
+    .menu__link>button:hover{
+        color: var(--main-text-black);
+    }
 }
 .menu__link>button{
     white-space: nowrap;
     color: var(--main-text-grey);
 }
-.menu__link_active {
+.menu__link_active>button {
     color: var(--main-text-green);
 }
 /* Food list */
