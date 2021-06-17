@@ -87,3 +87,16 @@ selectButton.addEventListener("click", function() {
         });
     }
 });
+
+// Select dish
+const menuLinks = document.querySelectorAll(".menu__link");
+const menuTitle = document.querySelector(".food__title");
+for(let i = 0; i < menuLinks.length; i++){
+    menuLinks[i].addEventListener("click", function(){
+        for(let j = 0; j < menuLinks.length; j++){
+            menuLinks[j].classList.remove("menu__link_active");
+        }
+        menuLinks[i].classList.add("menu__link_active");
+        menuTitle.innerHTML = menuLinks[i].textContent;
+    });
+}
