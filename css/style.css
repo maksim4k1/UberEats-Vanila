@@ -119,6 +119,8 @@
     display: inline-block;
     margin: 0 40.5px 0 0;
     cursor: pointer;
+}
+.menu__link>button{
     transition: all 0.3s;
 }
 @media(hover){
