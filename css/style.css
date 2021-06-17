@@ -16,7 +16,7 @@
     display: flex;
 
 }
-.main-header__link>a {
+.main-header__link>button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,13 +31,13 @@
     transition: all 0.3s;
 }
 @media(hover){
-    .main-header__link>a:hover{
+    .main-header__link>button:hover{
         border: none;
         color: var(--main-white);
         background: var(--main-green);
     }
 }
-.main-header__link_dark>a {
+.main-header__link_dark>button {
     margin: 0;
     color: var(--main-white);
     background: var(--main-black);
