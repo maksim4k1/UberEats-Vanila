@@ -1,3 +1,19 @@
+/* Default */
+.darkening-background {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background: var(--main-bg-darkening);
+}
+.body-overflow{
+    overflow: hidden;
+}
 /* Header */
 .main-header {
     height: 72px;
@@ -16,7 +32,7 @@
     display: flex;
 
 }
-.main-header__link>a {
+.main-header__link>button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,13 +47,13 @@
     transition: all 0.3s;
 }
 @media(hover){
-    .main-header__link>a:hover{
+    .main-header__link>button:hover{
         border: none;
         color: var(--main-white);
         background: var(--main-green);
     }
 }
-.main-header__link_dark>a {
+.main-header__link_dark>button {
     margin: 0;
     color: var(--main-white);
     background: var(--main-black);
@@ -59,6 +75,74 @@
     .main-header__basket:hover svg>path{
         fill: var(--main-green);
     }
+}
+/* Sign In / Register modal */
+.main-header__modal {
+    padding: 0 15px;
+    transition: all 0.3s;
+    opacity: 0;
+    z-index: -100;
+}
+.main-header__modal-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 25px 35px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 20px;
+    background: var(--main-white);
+}
+.main-header__modal-title {
+    font-size: 32px;
+    font-weight: 500;
+}
+.main-header__modal-input {
+    max-width: 300px;
+    width: 100%;
+    padding: 5px 8px;
+    display: block;
+    border: 1px solid #E0E0E0;
+    transition: all 0.3s;
+}
+.main-header__modal-input:focus{
+    border: 1px solid var(--main-green);
+}
+@media (hover) {
+    .main-header__modal-input:hover{
+        border: 1px solid var(--main-green);
+    }
+}
+.main-header__modal-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 35px;
+    font-size: 13px;
+    font-weight: 500;
+    background: var(--main-white);
+    border: 1px solid #E0E0E0;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+@media(hover){
+    .main-header__modal-button:hover{
+        border: none;
+        color: var(--main-white);
+        background: var(--main-green);
+    }
+}
+.main-header__modal-link {
+    font-size: 14px;
+    text-align: center;
+}
+.main-header__modal-link>button{
+    color: var(--main-green);
+}
+.toggle-modal{
+    opacity: 1;
+    z-index: 100;
 }
 /* Home */
 .home {
@@ -121,10 +205,18 @@
     cursor: pointer;
 }
 .menu__link>button{
+    transition: all 0.3s;
+}
+@media(hover){
+    .menu__link>button:hover{
+        color: var(--main-text-black);
+    }
+}
+.menu__link>button{
     white-space: nowrap;
     color: var(--main-text-grey);
 }
-.menu__link_active {
+.menu__link_active>button {
     color: var(--main-text-green);
 }
 /* Food list */

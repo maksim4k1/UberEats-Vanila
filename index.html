@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <title>Uber Eats</title>
+    <title>Uber Eats | Food Delivery and Takeout | Order Online from Restaurants Near You</title>
     <meta charset='utf-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name="description" content="Find the best restaurants that deliver. Get contactless delivery for restaurant takeout, groceries, and more! Order food online or in the Uber Eats app and support local restaurants.">
     <!-- ====================F O N T==================== -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <!-- ====================S T Y L E==================== -->
     <link href='css/custom.css' rel='stylesheet' />
     <link href='css/style.css' rel='stylesheet' />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
 <body>
     <header class="main-header">
         <div class="main-header__container container">
             <div class="main-header__logo"><a href="index.html"><img src="img/svg/logo.svg" alt="logotype"></a></div>
             <div class="main-header__navigation">
-                <div class="main-header__link"><a href="#">Sign In</a></div>
-                <div class="main-header__link main-header__link_dark"><a href="#">Register</a></div>
+                <div class="main-header__link"><button type="button" id="openSignin">Sign In</button></div>
+                <div class="main-header__link main-header__link_dark"><button type="button" id="openRegister">Register</button></div>
                 <!-- Basket -->
                 <div class="main-header__basket">
                     <svg width="19" height="23" viewBox="0 0 19 23" fill="#000000" xmlns="http://www.w3.org/2000/svg">
@@ -26,6 +28,25 @@
                     </svg>
                 </div>
             </div>
+        </div>
+        <div class="main-header__modal darkening-background" id="signin">
+            <form class="main-header__modal-form">
+                <h3 class="main-header__modal-title">Авторизация</h3>
+                <input type="text" name="login" class="main-header__modal-input" placeholder="Введите логин"/>
+                <input type="password" name="password" class="main-header__modal-input" placeholder="Введите пароль"/>
+                <button class="main-header__modal-button">Sign In</button>
+                <div class="main-header__modal-link">Еще не пользовались Uber Eats? <button type="button">Создать аккаунт</button></div>
+            </form>
+        </div>
+        <div class="main-header__modal darkening-background" id="register">
+            <form class="main-header__modal-form">
+                <h3 class="main-header__modal-title">Регистрация</h3>
+                <input type="text" name="login" class="main-header__modal-input" placeholder="Введите логин"/>
+                <input type="email" name="email" class="main-header__modal-input" placeholder="Введите email"/>
+                <input type="password" name="password" class="main-header__modal-input" placeholder="Введите пароль"/>
+                <input type="password" name="check_password" class="main-header__modal-input" placeholder="Подтвердите пароль"/>
+                <button class="main-header__modal-button">Register</button>
+            </form>
         </div>
     </header>
     <!----------------------------------------------S T A R T   C O N T E N T-------------------------------------------->
@@ -43,7 +64,7 @@
         </section>
         <section class="menu">
             <div class="menu__container container">
-                <div class="menu__link menu__link_active"><a href="#">Закуски</a></div>
+                <div class="menu__link menu__link_active"><button type="button">Закуски</button></div>
                 <div class="menu__link"><button type="button">Салаты</button></div>
                 <div class="menu__link"><button type="button">Супы</button></div>
                 <div class="menu__link"><button type="button">Горячие блюда</button></div>
@@ -148,7 +169,7 @@
                         </div>
                         <!-- Instagram -->
                         <div class="main-footer__link">
-                            <a href="https://www.instagram.com/" target="_blank">
+                            <a href="https://www.instagram.com/website_creator.kg/" target="_blank">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0325 3H7.96724C5.22831 3 3 5.22841 3 7.96735V16.0327C3 18.7717 5.22831 21 7.96724 21H16.0325C18.7717 21 21 18.7716 21 16.0327V7.96735C21.0001 5.22841 18.7717 3 16.0325 3ZM20.0001 16.3579C20.0001 18.3662 18.3662 20 16.3579 20H7.642C5.6338 20.0001 4 18.3662 4 16.3579V7.64212C4 5.63392 5.6338 4 7.642 4H16.3578C18.3661 4 20 5.63392 20 7.64212V16.3579H20.0001ZM7.36186 12.0002C7.36186 9.4427 9.44249 7.36207 12 7.36207C14.5575 7.36207 16.6381 9.4427 16.6381 12.0002C16.6381 14.5576 14.5575 16.6381 12 16.6381C9.44249 16.6381 7.36186 14.5576 7.36186 12.0002ZM16.4349 5.83418C16.5833 5.68509 16.7898 5.6 17 5.6C17.2109 5.6 17.4175 5.68509 17.5658 5.83418C17.7149 5.98255 17.8 6.18909 17.8 6.4C17.8 6.61018 17.7149 6.81673 17.5658 6.96582C17.4167 7.11418 17.2109 7.2 17 7.2C16.7898 7.2 16.5833 7.11418 16.4349 6.96582C16.2858 6.81673 16.2 6.61025 16.2 6.4C16.2 6.18909 16.2857 5.98255 16.4349 5.83418Z" fill="white"/>
                                     <mask id="mask0" maskUnits="userSpaceOnUse" x="7" y="5" width="11" height="12">
@@ -180,5 +201,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
